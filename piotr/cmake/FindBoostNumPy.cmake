@@ -7,7 +7,9 @@ SET(_BOOST_NUMPY_SEARCH
   $ENV{BOOST_DIR}
   $ENV{BOOST_NUMPY_DIR}
   /usr/include
-  /usr/local/include)
+  /usr/local/include
+  $ENV{HOME}/.local/include
+  $ENV{HOME}/.local/lib)
  
 find_path(BOOST_NUMPY_INCLUDE_DIR boost/numpy.hpp PATHS ${_BOOST_NUMPY_SEARCH} PATH_SUFFIXES "include")
 find_library(BOOST_NUMPY_LIBRARY_RELEASE NAMES boost_numpy HINTS ${_BOOST_NUMPY_SEARCH} PATH_SUFFIXES "lib")

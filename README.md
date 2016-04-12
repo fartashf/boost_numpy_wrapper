@@ -14,10 +14,24 @@ The following two libraries must be installed:
 - Boost compiled with Python support
 - Boost.NumPy [Compile_Boost_NumPy](http://www.edge.no/wiki/Compile_Boost_NumPy)
 
+```
+git clone https://github.com/ndarray/Boost.NumPy.git
+cd Boost.NumPy/
+mkdir release
+cd release
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="$HOME/.local/" ..
+make; make install
+cd ..
+mkdir debug
+cd debug
+cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEBUG_POSTFIX="-gd" -DCMAKE_INSTALL_PREFIX="$HOME/.local/" ..
+make; make install
+```
+
 ## Writing a Boost.NumPy Module
-write the wrapper
-bind the wrapper
-write cmakefile
-compile
-import
-compare
+- write the wrapper
+- bind the wrapper
+- write cmakefile
+- compile
+- import
+- compare
